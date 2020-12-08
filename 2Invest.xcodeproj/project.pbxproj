@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F14600122576C0A3004C4807 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14600112576C0A3004C4807 /* DetailViewController.swift */; };
+		F146001D25771E0D004C4807 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146001C25771E0D004C4807 /* Company.swift */; };
+		F146002225771F16004C4807 /* Companies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146002125771F16004C4807 /* Companies.swift */; };
 		F146FFD52576B042004C4807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146FFD42576B042004C4807 /* AppDelegate.swift */; };
 		F146FFD72576B042004C4807 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146FFD62576B042004C4807 /* SceneDelegate.swift */; };
 		F146FFD92576B042004C4807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146FFD82576B042004C4807 /* ViewController.swift */; };
@@ -15,6 +18,9 @@
 		F146FFE12576B046004C4807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F146FFDF2576B046004C4807 /* LaunchScreen.storyboard */; };
 		F146FFEC2576B046004C4807 /* _InvestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146FFEB2576B046004C4807 /* _InvestTests.swift */; };
 		F146FFF72576B046004C4807 /* _InvestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F146FFF62576B046004C4807 /* _InvestUITests.swift */; };
+		F1789598257C9E7F005667C4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1789597257C9E7F005667C4 /* StartViewController.swift */; };
+		F19C699C257AD31500037B45 /* MyStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C699B257AD31500037B45 /* MyStocksViewController.swift */; };
+		F1FAFC7225795B4B002AADFF /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAFC7125795B4B002AADFF /* Daily.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F14600112576C0A3004C4807 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F146001C25771E0D004C4807 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		F146002125771F16004C4807 /* Companies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Companies.swift; sourceTree = "<group>"; };
 		F146FFD12576B042004C4807 /* 2Invest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Invest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F146FFD42576B042004C4807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F146FFD62576B042004C4807 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		F146FFF22576B046004C4807 /* 2InvestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2InvestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F146FFF62576B046004C4807 /* _InvestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _InvestUITests.swift; sourceTree = "<group>"; };
 		F146FFF82576B046004C4807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1789597257C9E7F005667C4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F19C699B257AD31500037B45 /* MyStocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStocksViewController.swift; sourceTree = "<group>"; };
+		F1FAFC7125795B4B002AADFF /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,12 @@
 				F146FFD42576B042004C4807 /* AppDelegate.swift */,
 				F146FFD62576B042004C4807 /* SceneDelegate.swift */,
 				F146FFD82576B042004C4807 /* ViewController.swift */,
+				F1789597257C9E7F005667C4 /* StartViewController.swift */,
+				F14600112576C0A3004C4807 /* DetailViewController.swift */,
+				F19C699B257AD31500037B45 /* MyStocksViewController.swift */,
+				F146001C25771E0D004C4807 /* Company.swift */,
+				F146002125771F16004C4807 /* Companies.swift */,
+				F1FAFC7125795B4B002AADFF /* Daily.swift */,
 				F146FFDA2576B042004C4807 /* Main.storyboard */,
 				F146FFDD2576B046004C4807 /* Assets.xcassets */,
 				F146FFDF2576B046004C4807 /* LaunchScreen.storyboard */,
@@ -260,7 +278,13 @@
 			files = (
 				F146FFD92576B042004C4807 /* ViewController.swift in Sources */,
 				F146FFD52576B042004C4807 /* AppDelegate.swift in Sources */,
+				F19C699C257AD31500037B45 /* MyStocksViewController.swift in Sources */,
+				F14600122576C0A3004C4807 /* DetailViewController.swift in Sources */,
+				F146001D25771E0D004C4807 /* Company.swift in Sources */,
+				F1789598257C9E7F005667C4 /* StartViewController.swift in Sources */,
 				F146FFD72576B042004C4807 /* SceneDelegate.swift in Sources */,
+				F146002225771F16004C4807 /* Companies.swift in Sources */,
+				F1FAFC7225795B4B002AADFF /* Daily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
