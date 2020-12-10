@@ -14,7 +14,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var companyImageView: UIImageView!
-    @IBOutlet weak var updatedLabel: UILabel!
     @IBOutlet weak var tickerLabel: UILabel!
     @IBOutlet weak var openLabel: UILabel!
     @IBOutlet weak var closeLabel: UILabel!
@@ -22,6 +21,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lowLabel: UILabel!
 
     @IBOutlet weak var addButtonPressed: UIButton!
+    @IBOutlet weak var returnHomeButton: UIButton!
     
     var cameFromDetail = true
     var companyInfo: Company!
@@ -33,7 +33,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addButtonPressed.isHidden = !cameFromDetail
+        returnHomeButton.isHidden = !cameFromDetail
+        
         navigationController?.navigationBar.barTintColor = MyStocksViewController.orangeColor
+        
         
         guard let url = URL(string: "https://s3.polygon.io/logos/\(ticker.lowercased())/logo.png") else {return}
         do {
@@ -57,7 +60,6 @@ class DetailViewController: UIViewController {
         marketLabel.text = companyInfo.primaryExch
         countryLabel.text = companyInfo.locale
         currencyLabel.text = companyInfo.currency
-        updatedLabel.text = companyInfo.updated
         tickerLabel.text = companyInfo.ticker
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

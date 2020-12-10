@@ -86,7 +86,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="15x-NQ-g0o">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="AOS-oV-YBC" kind="presentation" modalPresentationStyle="fullScreen" id="KVl-c7-jhj"/>
+                                <segue destination="AOS-oV-YBC" kind="show" id="KVl-c7-jhj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -104,21 +104,9 @@
             <objects>
                 <viewController id="Bk2-XD-rfT" customClass="DetailViewController" customModule="_Invest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vmv-mu-I0s">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Updated On:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRM-wY-bPe">
-                                <rect key="frame" x="0.0" y="548" width="134" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkL-f1-ZFU">
-                                <rect key="frame" x="154" y="548" width="166" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P5-ve-RyK">
                                 <rect key="frame" x="10" y="10" width="300" height="45"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -326,9 +314,24 @@
                                     <constraint firstAttribute="trailing" secondItem="ssQ-ZV-UOz" secondAttribute="trailing" constant="1" id="zkl-64-Ohc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-8P-OyJ">
-                                <rect key="frame" x="0.0" y="498" width="169" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NY-O5-fTR">
+                                <rect key="frame" x="160" y="518" width="160" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.52652102869999995" blue="0.2480960985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add to my Companies">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="Bk2-XD-rfT" eventType="touchUpInside" id="b9D-1Y-xze"/>
+                                    <segue destination="AOS-oV-YBC" kind="show" identifier="AddStock" id="bMy-a0-cVa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-8P-OyJ">
+                                <rect key="frame" x="0.0" y="518" width="160" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.52652102869999995" blue="0.2480960985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="btk-gm-SOX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Return Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -338,51 +341,30 @@
                                     <segue destination="knO-kD-HAE" kind="presentation" modalPresentationStyle="fullScreen" id="mOn-iM-0Ep"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NY-O5-fTR">
-                                <rect key="frame" x="151" y="498" width="169" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.52652102869999995" blue="0.2480960985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Add to my Companies">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButtonPressed:" destination="Bk2-XD-rfT" eventType="touchUpInside" id="b9D-1Y-xze"/>
-                                    <segue destination="AOS-oV-YBC" kind="presentation" identifier="AddStock" modalPresentationStyle="fullScreen" id="bMy-a0-cVa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ziO-xd-NbZ"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ziO-xd-NbZ" firstAttribute="bottom" secondItem="7NY-O5-fTR" secondAttribute="bottom" id="10e-hL-sWX"/>
                             <constraint firstItem="yoF-Ua-iOX" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" constant="102" id="1TP-ED-dMu"/>
                             <constraint firstItem="2Ch-BC-e1C" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" id="6jy-uE-3yc"/>
-                            <constraint firstItem="gRM-wY-bPe" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" id="B91-66-uVT"/>
                             <constraint firstItem="7P5-ve-RyK" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" constant="10" id="FVs-eB-dyg"/>
                             <constraint firstItem="Ovw-er-9gC" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" id="Gs9-7L-TtS"/>
-                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="leading" secondItem="gRM-wY-bPe" secondAttribute="leading" id="JZy-oc-Zez"/>
-                            <constraint firstItem="7NY-O5-fTR" firstAttribute="trailing" secondItem="BkL-f1-ZFU" secondAttribute="trailing" id="M3v-k3-niZ"/>
+                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="baseline" secondItem="7NY-O5-fTR" secondAttribute="baseline" id="LWr-m9-NQK"/>
                             <constraint firstItem="7P5-ve-RyK" firstAttribute="centerX" secondItem="yoF-Ua-iOX" secondAttribute="centerX" id="MWU-DC-RVy"/>
                             <constraint firstItem="Ovw-er-9gC" firstAttribute="trailing" secondItem="ziO-xd-NbZ" secondAttribute="trailing" id="PWP-1B-pe6"/>
-                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="baseline" secondItem="7NY-O5-fTR" secondAttribute="baseline" id="R3F-zg-O2V"/>
+                            <constraint firstItem="7NY-O5-fTR" firstAttribute="trailing" secondItem="ziO-xd-NbZ" secondAttribute="trailing" id="XQt-y9-UyO"/>
+                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="leading" secondItem="2Ch-BC-e1C" secondAttribute="leading" id="Xt0-eE-j4F"/>
                             <constraint firstItem="2Ch-BC-e1C" firstAttribute="top" secondItem="Ovw-er-9gC" secondAttribute="bottom" constant="12" id="YfC-XW-RIL"/>
-                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="top" secondItem="2Ch-BC-e1C" secondAttribute="bottom" constant="18" id="e5V-ez-YyL"/>
-                            <constraint firstItem="gRM-wY-bPe" firstAttribute="bottom" secondItem="ziO-xd-NbZ" secondAttribute="bottom" id="eWM-9v-Fbl"/>
-                            <constraint firstItem="BkL-f1-ZFU" firstAttribute="bottom" secondItem="ziO-xd-NbZ" secondAttribute="bottom" id="gbw-cq-NSX"/>
                             <constraint firstItem="ziO-xd-NbZ" firstAttribute="trailing" secondItem="yoF-Ua-iOX" secondAttribute="trailing" constant="102" id="hf9-hy-vaJ"/>
                             <constraint firstItem="yoF-Ua-iOX" firstAttribute="top" secondItem="7P5-ve-RyK" secondAttribute="bottom" constant="8" symbolic="YES" id="jPl-C7-NUL"/>
-                            <constraint firstItem="7NY-O5-fTR" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" constant="151" id="tTI-yg-FAD"/>
-                            <constraint firstItem="BkL-f1-ZFU" firstAttribute="trailing" secondItem="ziO-xd-NbZ" secondAttribute="trailing" id="tff-e3-RuK"/>
                             <constraint firstItem="2Ch-BC-e1C" firstAttribute="trailing" secondItem="ziO-xd-NbZ" secondAttribute="trailing" id="upU-bo-LHd"/>
-                            <constraint firstItem="BkL-f1-ZFU" firstAttribute="leading" secondItem="gRM-wY-bPe" secondAttribute="trailing" constant="20" id="vh6-P7-YKr"/>
                             <constraint firstItem="Ovw-er-9gC" firstAttribute="top" secondItem="yoF-Ua-iOX" secondAttribute="bottom" constant="20" id="xoK-mG-k8w"/>
                             <constraint firstItem="yoF-Ua-iOX" firstAttribute="centerX" secondItem="Ovw-er-9gC" secondAttribute="centerX" id="yKo-g7-JQ5"/>
                             <constraint firstItem="7P5-ve-RyK" firstAttribute="top" secondItem="ziO-xd-NbZ" secondAttribute="top" constant="10" id="yld-wJ-ePW"/>
-                            <constraint firstItem="ziO-xd-NbZ" firstAttribute="trailing" secondItem="3zm-8P-OyJ" secondAttribute="trailing" constant="151" id="zpX-9c-kDX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SER-l2-aw4">
-                        <barButtonItem key="rightBarButtonItem" title="Save" image="plus" catalog="system" id="P9H-Na-Tii"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="SER-l2-aw4"/>
                     <connections>
                         <outlet property="addButtonPressed" destination="7NY-O5-fTR" id="KjR-aD-GZm"/>
                         <outlet property="closeLabel" destination="FW6-g7-XWS" id="TD2-Or-xM7"/>
@@ -394,8 +376,8 @@
                         <outlet property="marketLabel" destination="Ymv-X0-bcf" id="MAf-7F-Rng"/>
                         <outlet property="nameLabel" destination="7P5-ve-RyK" id="8Bq-7P-Vff"/>
                         <outlet property="openLabel" destination="KJx-Sr-yon" id="Uyi-x3-ylf"/>
+                        <outlet property="returnHomeButton" destination="3zm-8P-OyJ" id="0BD-Hm-zBl"/>
                         <outlet property="tickerLabel" destination="Lx3-MG-udo" id="GFl-BE-5vG"/>
-                        <outlet property="updatedLabel" destination="BkL-f1-ZFU" id="X4B-47-5Rl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYZ-rl-gB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -441,7 +423,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Yn-kJ-OSD" kind="show" id="IUZ-dc-rwR"/>
+                                    <segue destination="3Yn-kJ-OSD" kind="presentation" modalPresentationStyle="fullScreen" id="IUZ-dc-rwR"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="1UG-cc-XUi">
@@ -599,11 +581,11 @@
             <objects>
                 <viewController title="My Stocks" id="AOS-oV-YBC" customClass="MyStocksViewController" customModule="_Invest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I2M-fD-kUf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-OK-4TD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="538"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="5HZ-EJ-hY3">
@@ -615,13 +597,13 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <segue destination="Bk2-XD-rfT" kind="presentation" identifier="ShowDetail" modalPresentationStyle="fullScreen" id="Xmn-EM-PQf"/>
+                                            <segue destination="Bk2-XD-rfT" kind="show" identifier="ShowDetail" id="Xmn-EM-PQf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-zW-7gg">
-                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="518" width="320" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.54050989380000003" blue="0.15432862899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Return Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -808,13 +790,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bMy-a0-cVa"/>
+        <segue reference="KVl-c7-jhj"/>
         <segue reference="mOn-iM-0Ep"/>
         <segue reference="Xmn-EM-PQf"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="2" width="444" height="600"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="polygon" width="1024" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
