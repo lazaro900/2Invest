@@ -33,7 +33,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addButtonPressed.isHidden = !cameFromDetail
-                
+        navigationController?.navigationBar.barTintColor = MyStocksViewController.orangeColor
+        
         guard let url = URL(string: "https://s3.polygon.io/logos/\(ticker.lowercased())/logo.png") else {return}
         do {
             let data = try Data(contentsOf: url)

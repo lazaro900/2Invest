@@ -107,6 +107,34 @@ class MyStocksViewController: UIViewController {
         }
     }
     
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+            sender.title = "Edit"
+            addButtonItem.isEnabled = true
+        } else {
+            tableView.setEditing(true, animated: true)
+            addButtonItem.isEnabled = false
+            sender.title = "Done"
+        }
+        saveData()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            myStocks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            saveData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let moveMainArray: Company = myStocks[sourceIndexPath.row]
+        myStocks.remove(at: sourceIndexPath.row)
+        myStocks.insert(moveMainArray, at: destinationIndexPath.row)
+        saveData()
+    }
+    
 
 
 }
