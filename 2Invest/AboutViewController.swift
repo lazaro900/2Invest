@@ -13,10 +13,7 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contentWidth = scrollView.bounds.width
-        let contentHeight = scrollView.bounds.height * 1.2
-        scrollView.contentSize = CGSize(width: contentWidth, height: contentHeight)
-
+       
 
     }
     
