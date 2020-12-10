@@ -14,10 +14,16 @@ class MyStocksViewController: UIViewController {
         var name: String
     }
     
+    static var orangeColor: UIColor!
+    
+    @IBOutlet weak var returnHomeButton: UIButton!
     var myStocks: [Company] = []
     var companyPriceInfo = Daily()
+    @IBOutlet weak var backButtonItem: UIBarButtonItem!
     let yesterday = Date().dayBefore
     
+    
+    @IBOutlet weak var addButtonItem: UIBarButtonItem!
     var passedCompany: Company!
     
 
@@ -31,7 +37,12 @@ class MyStocksViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         loadData()
+        navigationController?.navigationBar.barTintColor = returnHomeButton.backgroundColor
+        backButtonItem.tintColor = .white
+        addButtonItem.tintColor = .white
+        MyStocksViewController.orangeColor = returnHomeButton.backgroundColor
         
+                
         //this will check to see if an empty ticker was not passed and that a ticker thats not already in the list is not added again
         if passedCompany != nil {
             if (!myStocks.contains(Company(ticker: passedCompany.ticker, name: passedCompany.name, market: passedCompany.market, locale: passedCompany.locale, currency: passedCompany.currency, active: passedCompany.active, primaryExch: passedCompany.primaryExch, updated: passedCompany.updated))) {
@@ -86,7 +97,7 @@ class MyStocksViewController: UIViewController {
             }
             destination.dailyInfo = companyPriceInfo
             destination.ticker = myStocks[selectedIndexPath.row].ticker
-            
+            destination.cameFromDetail = false
 
             
         } else {

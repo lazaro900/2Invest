@@ -21,8 +21,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var highLabel: UILabel!
     @IBOutlet weak var lowLabel: UILabel!
 
-
-
+    @IBOutlet weak var addButtonPressed: UIButton!
+    
+    var cameFromDetail = true
     var companyInfo: Company!
     var dailyInfo: Daily!
     var name: String!
@@ -31,7 +32,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addButtonPressed.isHidden = !cameFromDetail
+                
         guard let url = URL(string: "https://s3.polygon.io/logos/\(ticker.lowercased())/logo.png") else {return}
         do {
             let data = try Data(contentsOf: url)
@@ -74,8 +76,11 @@ class DetailViewController: UIViewController {
             let destination = segue.destination as! MyStocksViewController
             destination.passedCompany = companyInfo
         }
+        cameFromDetail = true
 
     }
+    
+    
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
     }

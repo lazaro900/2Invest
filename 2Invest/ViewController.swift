@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var companies = Companies()
     var companyPriceInfo = Daily()
     let yesterday = Date().dayBefore
+    @IBOutlet weak var toolBar: UIToolbar!
     
 
     
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        toolBar.barTintColor = MyStocksViewController.orangeColor
         
         companies.getData {
             DispatchQueue.main.async {
@@ -104,7 +106,7 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
 
 }
 
