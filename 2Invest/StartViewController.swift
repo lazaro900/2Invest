@@ -22,6 +22,7 @@ class StartViewController: UIViewController {
         companiesButton.layer.cornerRadius = 20
         informationButton.layer.cornerRadius = 20
         Companies.page = 1
+        MyStocksViewController.orangeColor = aboutButton.backgroundColor
 
     }
     

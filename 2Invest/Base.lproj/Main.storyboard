@@ -75,9 +75,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2p6-ik-zqh" secondAttribute="trailing" id="3cg-xb-fri"/>
                             <constraint firstAttribute="bottom" secondItem="4rK-0L-44P" secondAttribute="bottom" id="63q-50-rQy"/>
-                            <constraint firstItem="4rK-0L-44P" firstAttribute="top" secondItem="2p6-ik-zqh" secondAttribute="bottom" id="Bwi-Pu-dm2"/>
                             <constraint firstItem="2p6-ik-zqh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VeH-Fx-zWA"/>
                             <constraint firstItem="4rK-0L-44P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZLN-TV-mJd"/>
+                            <constraint firstItem="4rK-0L-44P" firstAttribute="top" secondItem="2p6-ik-zqh" secondAttribute="bottom" id="iGV-cj-qIi"/>
                             <constraint firstItem="2p6-ik-zqh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pIW-PK-cMw"/>
                             <constraint firstAttribute="trailing" secondItem="4rK-0L-44P" secondAttribute="trailing" id="tSM-vq-15o"/>
                         </constraints>
@@ -314,24 +314,10 @@
                                     <constraint firstAttribute="trailing" secondItem="ssQ-ZV-UOz" secondAttribute="trailing" constant="1" id="zkl-64-Ohc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NY-O5-fTR">
-                                <rect key="frame" x="160" y="518" width="160" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-8P-OyJ">
+                                <rect key="frame" x="0.0" y="520" width="164" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.52652102869999995" blue="0.2480960985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Add to my Companies">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButtonPressed:" destination="Bk2-XD-rfT" eventType="touchUpInside" id="b9D-1Y-xze"/>
-                                    <segue destination="AOS-oV-YBC" kind="show" identifier="AddStock" id="bMy-a0-cVa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zm-8P-OyJ">
-                                <rect key="frame" x="0.0" y="518" width="160" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.52652102869999995" blue="0.2480960985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="btk-gm-SOX"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Return Home">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -341,20 +327,29 @@
                                     <segue destination="knO-kD-HAE" kind="presentation" modalPresentationStyle="fullScreen" id="mOn-iM-0Ep"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NY-O5-fTR">
+                                <rect key="frame" x="160" y="520" width="160" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.52652102869999995" blue="0.2480960985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="Add to my Companies">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="Bk2-XD-rfT" eventType="touchUpInside" id="b9D-1Y-xze"/>
+                                    <segue destination="AOS-oV-YBC" kind="show" identifier="AddStock" id="bMy-a0-cVa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ziO-xd-NbZ"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ziO-xd-NbZ" firstAttribute="bottom" secondItem="7NY-O5-fTR" secondAttribute="bottom" id="10e-hL-sWX"/>
                             <constraint firstItem="yoF-Ua-iOX" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" constant="102" id="1TP-ED-dMu"/>
                             <constraint firstItem="2Ch-BC-e1C" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" id="6jy-uE-3yc"/>
                             <constraint firstItem="7P5-ve-RyK" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" constant="10" id="FVs-eB-dyg"/>
                             <constraint firstItem="Ovw-er-9gC" firstAttribute="leading" secondItem="ziO-xd-NbZ" secondAttribute="leading" id="Gs9-7L-TtS"/>
-                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="baseline" secondItem="7NY-O5-fTR" secondAttribute="baseline" id="LWr-m9-NQK"/>
                             <constraint firstItem="7P5-ve-RyK" firstAttribute="centerX" secondItem="yoF-Ua-iOX" secondAttribute="centerX" id="MWU-DC-RVy"/>
                             <constraint firstItem="Ovw-er-9gC" firstAttribute="trailing" secondItem="ziO-xd-NbZ" secondAttribute="trailing" id="PWP-1B-pe6"/>
-                            <constraint firstItem="7NY-O5-fTR" firstAttribute="trailing" secondItem="ziO-xd-NbZ" secondAttribute="trailing" id="XQt-y9-UyO"/>
-                            <constraint firstItem="3zm-8P-OyJ" firstAttribute="leading" secondItem="2Ch-BC-e1C" secondAttribute="leading" id="Xt0-eE-j4F"/>
                             <constraint firstItem="2Ch-BC-e1C" firstAttribute="top" secondItem="Ovw-er-9gC" secondAttribute="bottom" constant="12" id="YfC-XW-RIL"/>
                             <constraint firstItem="ziO-xd-NbZ" firstAttribute="trailing" secondItem="yoF-Ua-iOX" secondAttribute="trailing" constant="102" id="hf9-hy-vaJ"/>
                             <constraint firstItem="yoF-Ua-iOX" firstAttribute="top" secondItem="7P5-ve-RyK" secondAttribute="bottom" constant="8" symbolic="YES" id="jPl-C7-NUL"/>
@@ -382,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYZ-rl-gB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236.875" y="861.97183098591552"/>
+            <point key="canvasLocation" x="2233.125" y="860.91549295774644"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="BvN-V1-uEI">
@@ -585,7 +580,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-OK-4TD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="517"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="5HZ-EJ-hY3">
@@ -602,27 +597,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLK-zW-7gg">
-                                <rect key="frame" x="0.0" y="518" width="320" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.54050989380000003" blue="0.15432862899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Return Home">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Juk-uE-u4q">
+                                <rect key="frame" x="118" y="517" width="84" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="5py-pD-JSy"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="A-Z"/>
+                                    <segment title="Z-A"/>
+                                </segments>
                                 <connections>
-                                    <segue destination="knO-kD-HAE" kind="presentation" modalPresentationStyle="fullScreen" id="CcX-a7-VLf"/>
+                                    <action selector="sortSegmentPressed:" destination="AOS-oV-YBC" eventType="valueChanged" id="RSc-yL-pcX"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAN-5m-K2V"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="aLK-zW-7gg" firstAttribute="trailing" secondItem="PAN-5m-K2V" secondAttribute="trailing" id="48d-ef-23t"/>
-                            <constraint firstItem="aLK-zW-7gg" firstAttribute="top" secondItem="dIW-OK-4TD" secondAttribute="bottom" id="b5p-MB-iek"/>
                             <constraint firstItem="PAN-5m-K2V" firstAttribute="trailing" secondItem="dIW-OK-4TD" secondAttribute="trailing" id="hPW-Sm-FCy"/>
                             <constraint firstItem="dIW-OK-4TD" firstAttribute="leading" secondItem="PAN-5m-K2V" secondAttribute="leading" id="imC-Uj-RFb"/>
+                            <constraint firstItem="Juk-uE-u4q" firstAttribute="leading" secondItem="PAN-5m-K2V" secondAttribute="leading" constant="118" id="qGb-3A-Tel"/>
+                            <constraint firstItem="Juk-uE-u4q" firstAttribute="bottom" secondItem="PAN-5m-K2V" secondAttribute="bottom" id="uVJ-x6-CN4"/>
                             <constraint firstItem="dIW-OK-4TD" firstAttribute="top" secondItem="PAN-5m-K2V" secondAttribute="top" id="w9D-NV-0xe"/>
-                            <constraint firstItem="PAN-5m-K2V" firstAttribute="bottom" secondItem="aLK-zW-7gg" secondAttribute="bottom" id="zQm-NX-eTd"/>
-                            <constraint firstItem="aLK-zW-7gg" firstAttribute="leading" secondItem="PAN-5m-K2V" secondAttribute="leading" id="zTB-Su-i0h"/>
+                            <constraint firstItem="Juk-uE-u4q" firstAttribute="top" secondItem="dIW-OK-4TD" secondAttribute="bottom" id="wDc-bv-zN8"/>
+                            <constraint firstItem="PAN-5m-K2V" firstAttribute="trailing" secondItem="Juk-uE-u4q" secondAttribute="trailing" constant="118" id="yfr-jm-XbW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Companies" id="r70-a3-gcn">
@@ -648,13 +646,13 @@
                     <connections>
                         <outlet property="addButtonItem" destination="lQl-OA-9jf" id="ZPC-I1-mlg"/>
                         <outlet property="backButtonItem" destination="f5t-07-agI" id="V2A-AE-Mlv"/>
-                        <outlet property="returnHomeButton" destination="aLK-zW-7gg" id="w0V-Fn-pN1"/>
+                        <outlet property="sortSegmentedControl" destination="Juk-uE-u4q" id="Qeo-xZ-fqM"/>
                         <outlet property="tableView" destination="dIW-OK-4TD" id="2AE-20-QIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9L9-e3-wvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1320" y="863"/>
+            <point key="canvasLocation" x="-1320" y="861.97183098591552"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fLX-J4-2bz">
@@ -790,7 +788,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KVl-c7-jhj"/>
+        <segue reference="bMy-a0-cVa"/>
         <segue reference="mOn-iM-0Ep"/>
         <segue reference="Xmn-EM-PQf"/>
     </inferredMetricsTieBreakers>

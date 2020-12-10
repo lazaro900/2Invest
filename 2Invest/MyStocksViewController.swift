@@ -15,8 +15,7 @@ class MyStocksViewController: UIViewController {
     }
     
     static var orangeColor: UIColor!
-    
-    @IBOutlet weak var returnHomeButton: UIButton!
+    @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     var myStocks: [Company] = []
     var companyPriceInfo = Daily()
     @IBOutlet weak var backButtonItem: UIBarButtonItem!
@@ -37,12 +36,10 @@ class MyStocksViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         loadData()
-        navigationController?.navigationBar.barTintColor = returnHomeButton.backgroundColor
         backButtonItem.tintColor = .white
         addButtonItem.tintColor = .white
-        MyStocksViewController.orangeColor = returnHomeButton.backgroundColor
+        navigationController?.navigationBar.barTintColor = MyStocksViewController.orangeColor
         
-                
         //this will check to see if an empty ticker was not passed and that a ticker thats not already in the list is not added again
         if passedCompany != nil {
             if (!myStocks.contains(Company(ticker: passedCompany.ticker, name: passedCompany.name, market: passedCompany.market, locale: passedCompany.locale, currency: passedCompany.currency, active: passedCompany.active, primaryExch: passedCompany.primaryExch, updated: passedCompany.updated))) {
@@ -53,6 +50,34 @@ class MyStocksViewController: UIViewController {
         self.tableView.reloadData()
 
 
+    }
+    
+    func configureSegmentControl() {
+        let orangeFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "PrimaryColor") ?? UIColor.orange]
+        let whiteFontColor = [NSAttributedString.Key.foregroundColor : UIColor .white]
+
+        
+        sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
+        sortSegmentedControl.setTitleTextAttributes(orangeFontColor, for: .selected)
+        sortSegmentedControl.setTitleTextAttributes(whiteFontColor, for: .normal)
+
+        sortSegmentedControl.layer.borderWidth = 1.0
+    }
+    
+    func sortBasedOnSegmentPressed() {
+        switch sortSegmentedControl.selectedSegmentIndex {
+        case 0: //a-z
+            myStocks.sort(by: {$0.name < $1.name})
+        case 1: // closest
+            myStocks.sort(by: {$0.name > $1.name})
+        default:
+            print("this should not happen")
+        }
+        tableView.reloadData()
+    }
+    
+    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
     }
     
     func saveData() {
@@ -112,10 +137,14 @@ class MyStocksViewController: UIViewController {
             tableView.setEditing(false, animated: true)
             sender.title = "Edit"
             addButtonItem.isEnabled = true
+            sortSegmentedControl.isHidden = true
+            
         } else {
             tableView.setEditing(true, animated: true)
             addButtonItem.isEnabled = false
             sender.title = "Done"
+            sortSegmentedControl.isHidden = false
+
         }
         saveData()
     }
